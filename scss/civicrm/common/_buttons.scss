@@ -223,8 +223,10 @@ $button-border-radius: 2px;
   }
 
   a.crm-hover-button {
+    border-radius: $border-radius-base !important;
+    color: $brand-danger;
+    opacity: 1;
     padding: 4px 6px;
-    border-radius: 2 !important;
 
     &.css_right {
       padding: 7px 12px;
@@ -236,7 +238,16 @@ $button-border-radius: 2px;
 
     &:hover {
       background-image: none;
-      color: inherit;
+      color: darken($brand-danger, $crm-darken-percentage);
+    }
+
+    &.crm-clear-link,
+    &.crm-clear-attachment {
+      color: $brand-danger;
+
+      &:hover {
+        color: darken($brand-danger, $crm-darken-percentage);
+      }
     }
   }
 
